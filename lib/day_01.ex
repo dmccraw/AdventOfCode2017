@@ -6,7 +6,6 @@ defmodule AdventOfCode2017.Day01 do
     add(list, 0, 0)
   end
 
-
   defp divide(list, i) when (i < 10 and i > 0), do: [i] ++ list
   defp divide(list, i) when i > 10 do
     digit = rem(i, 10)
@@ -21,7 +20,6 @@ defmodule AdventOfCode2017.Day01 do
       _ -> sum + add(rest, a, sum)
     end
   end
-
 
   def captcha2(input) do
     list = divide([], input)
@@ -48,6 +46,3 @@ end
 # https://github.com/michallepicki/advent_of_code_2017/blob/master/1/a.exs
 # https://gitlab.com/NobbZ/aoc17/blob/master/lib/aoc/day1.ex
 # https://github.com/JEG2/advent_of_code_2017/blob/master/day_01/inverse_captcha.exs
-
-# part 2
-
